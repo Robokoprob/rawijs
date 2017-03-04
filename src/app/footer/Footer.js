@@ -1,12 +1,11 @@
 import React from 'react';
-import styles from'./footer.scss';
+import componentStyles from'./footer.scss';
+import globalStyles from 'global/global.scss';
 
 class Footer extends React.Component {
     render() {
         return (
-            <footer>
-                <p className={styles.paragraph}>Footer content</p>
-            </footer>
+            <footer>Footer content</footer>
         )
     }
 }

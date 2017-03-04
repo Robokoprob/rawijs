@@ -1,9 +1,7 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import ActionDone from 'material-ui/svg-icons/action/done';
-import ActionSettings from 'material-ui/svg-icons/action/settings';
-
+import { debug } from 'global/constants';
+import componentStyles from'./header.scss';
+import globalStyles from 'global/global.scss';
 
 class Header extends React.Component {
     constructor(props) {
@@ -16,17 +14,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <AppBar title={this.state.title}
-                    showMenuIconButton={true}
-                    iconElementRight={
-                    <IconButton>
-                        { this.state.homePage ? <ActionSettings/> : <ActionDone /> }
-                    </IconButton>
-                    }
-                    onLeftIconButtonTouchTap={() => {this.props.store.dispatch({type: 'OPEN_DRAWER', open:true})}}
-            >
-
-            </AppBar>
+            <header className={componentStyles.header}>
+                <h1><button type="button" className={componentStyles.button}>Rawijs</button></h1>
+            </header>
         )
     }
 }

@@ -3,7 +3,7 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
-    console.log("SW started");
+    //console.log("SW started");
 
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -15,7 +15,5 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-    console.log("Fetch");
-    console.log(event.request);
     return fetch(event.request);
 });

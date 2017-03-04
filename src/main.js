@@ -9,17 +9,7 @@ import rawijsApp from './redux/reducers';
 import serviceWorker from './serviceWorker/serviceWorkerInit';
 let store = createStore(rawijsApp);
 
-console.log(store.getState());
 injectTapEventPlugin();
-fetch("/mocks/test.json", {
-        method: 'get',
-        headers: new Headers({
-            'Content-Type': 'text/json'
-        })
-    }).then(response => { return response.json(); })
-    .then(json => {
-        console.log(json);
-    });
 
 render(
     <MuiThemeProvider>

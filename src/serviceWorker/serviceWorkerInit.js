@@ -1,10 +1,10 @@
 console.log("ok");
 
 if ('serviceWorker' in navigator) {
-    console.log("Serviceworker found!");
+    //console.log("Serviceworker found!");
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/sw.js').then(function (registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            //console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
             registration.onupdatefound = function() {
                 var installingWorker = registration.installing;
@@ -13,14 +13,14 @@ if ('serviceWorker' in navigator) {
                     switch (installingWorker.state) {
                         case 'installed':
                             if (navigator.serviceWorker.controller) {
-                                console.log('New or updated content is available.');
+                                //console.log('New or updated content is available.');
                             } else {
-                                console.log('Content is now available offline!');
+                                //console.log('Content is now available offline!');
                             }
                             break;
 
                         case 'redundant':
-                            console.error('The installing service worker became redundant.');
+                            //console.error('The installing service worker became redundant.');
                             break;
                     }
                 };
@@ -30,5 +30,5 @@ if ('serviceWorker' in navigator) {
         });
     });
 } else {
-    console.log("Geen serviceworker");
+    //console.log("Geen serviceworker");
 }
