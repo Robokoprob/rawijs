@@ -4,7 +4,7 @@ var path = require('path');
 
 var config = {
     entry: {
-        bundle: './src/main.js'
+        bundle: ['./src/main.js', './src/serviceWorker/serviceWorkerInit.js']
     },
 
     output: {
@@ -15,7 +15,23 @@ var config = {
 
     devServer: {
         inline: true,
-        port: 8082
+        port: 8082,
+        proxy: [
+            {
+                path: ['/**'],
+                target: '/index.html',
+                secure: false,
+                bypass: function(req, res, opt){
+                    if(req.path.indexOf('/img/') !== -1 || req.path.indexOf('/data/') !== -1 || req.path.indexOf('/build/') !== -1){
+                        return req.path;
+                    }
+
+                    if (req.headers.accept.indexOf('html') !== -1) {
+                        return '/index.html';
+                    }
+                }
+            }
+        ]
     },
 
     // devtool: 'eval',

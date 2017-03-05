@@ -21,7 +21,11 @@ class App extends Component {
             .then(json => {
                 const newState = Object.assign({}, {loading: false}, json);
                 this.setState(newState)
-            })
+            }).catch(error => {
+                const newState = Object.assign({}, {loading: false});
+                this.setState(newState); //TODO: display error message
+                console.error(error);
+        })
     }
 
     render() {
