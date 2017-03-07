@@ -1,18 +1,40 @@
 @import '../../global/constants.scss';
 
 .header {
-  border-bottom: 1px solid #484848;
-  box-shadow: 0 2px 1px #888888;
-  text-align: center;
+
+  background-color: #F8F8F8;
 
   position: absolute;
   width: 100%;
   z-index: 100;
 
-  background-color: #F8F8F8;
+  h1 {
+    border-bottom: 1px solid #484848;
+    box-shadow: 0 2px 1px #888888;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    align-items: stretch;
+    //justify-content: space-around;
+
+    a {
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 0.5em 1em;
+      text-align: center;
+
+      &:hover, &.active {
+        color: #FFFFFF;
+        background-color: #686868;
+      }
+    }
+  }
 }
 
-.button {
+.title {
+  display: inline-block;
   padding: 0.5em;
   border: none;
   background-color: transparent;

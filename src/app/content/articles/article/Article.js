@@ -1,12 +1,13 @@
 import React from 'react';
 import componentStyles from'./article.scss';
 import globalStyles from 'global/global.scss';
+import { Link } from 'react-router';
 
 class Article extends React.Component {
     render() {
         return (
             <article className={componentStyles.mainArticle}>
-                <a href={"#"+this.props.data.url}>{this.props.data.description}</a>
+                <Link to="/articles">{this.props.data.description}</Link>
             </article>
         )
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Article from './article/Article';
 import Loading from './loading/Loading';
 
 import componentStyles from'./content.scss';
@@ -8,14 +7,18 @@ import globalStyles from 'global/global.scss';
 class Content extends Component {
 
     render() {
-        const articleItems = this.props.loading ? null : this.props.articles.map((article) =>
-            <Article key={article.id} data={article} />
-        );
+        let content;
+        if (this.props.loading) {
+            content = (<Loading />);
+        } else if (this.props.children) {
+            content = (this.props.children);
+        } else {
+            content = (<div>Unknown content</div>);
+        }
 
         return (
             <main className={componentStyles.content}>
-                <Loading loading={this.props.loading}/>
-                {articleItems}
+                {content}
             </main>
         )
     }

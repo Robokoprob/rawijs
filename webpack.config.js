@@ -22,7 +22,7 @@ var config = {
                 target: '/index.html',
                 secure: false,
                 bypass: function(req, res, opt){
-                    if(req.path.indexOf('/img/') !== -1 || req.path.indexOf('/data/') !== -1 || req.path.indexOf('/build/') !== -1){
+                    if(req.path.indexOf('/sw.js') !== -1 || req.path.indexOf('/img/') !== -1 || req.path.indexOf('/data/') !== -1 || req.path.indexOf('/build/') !== -1){
                         return req.path;
                     }
 
@@ -85,7 +85,14 @@ var config = {
             filename: "styles.css",
             disable: false,
             allChunks: true
-        })
+        }),/*
+        new webpack.DefinePlugin({ // <-- key to reducing React's size
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin(), //minify everything
+        new webpack.optimize.AggressiveMergingPlugin()//Merge chunks*/
     ]
 };
 

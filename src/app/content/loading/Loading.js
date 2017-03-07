@@ -4,11 +4,7 @@ import globalStyles from 'global/global.scss';
 
 class Loading extends React.Component {
     render() {
-        if (this.props.loading) {
-            return <div>Loading...</div>
-        } else {
-            return null;
-        }
+        return <div>Loading...</div>
     }
 }
 

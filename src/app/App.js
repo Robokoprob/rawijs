@@ -32,7 +32,7 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Content loading={this.state.loading} articles={this.state.articles} />
+                <Content loading={this.state.loading} articles={this.state.articles} children={this.props.children}/>
                 <Footer />
             </div>
         )
