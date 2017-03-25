@@ -1,27 +1,8 @@
-import { combineReducers } from 'redux'
-import { OPEN_DRAWER } from './actionTypes'
+import { combineReducers } from 'redux';
+import ArticlesReducer from './reducer-articles';
 
-const initialDrawerState = {
-    drawer: {
-        isOpen: false
-    }
-};
-
-function drawer(state = initialDrawerState, action) {
-    switch (action.type) {
-        case OPEN_DRAWER: {
-            return Object.assign({}, state, {
-                drawerOpen: action.open
-            });
-        }
-        default: {
-            return state;
-        }
-    }
-}
-
-const rawijsApp = combineReducers({
-    drawer
+const allReducers = combineReducers({
+    articles: ArticlesReducer
 });
 
-export default rawijsApp;
+export default allReducers;

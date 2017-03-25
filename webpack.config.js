@@ -4,7 +4,10 @@ var path = require('path');
 
 var config = {
     entry: {
-        bundle: ['./src/main.js', './src/serviceWorker/serviceWorkerInit.js']
+        bundle: [
+            './src/main.js',
+            './src/serviceWorker/serviceWorkerInit.js'
+        ]
     },
 
     output: {
@@ -33,10 +36,6 @@ var config = {
             }
         ]
     },
-
-    // devtool: 'eval',
-    // devtool: 'inline-source-map',
-    // debug: true,
 
     resolve: {
         modules: [
