@@ -8,9 +8,7 @@ class Content extends Component {
 
     render() {
         let content;
-        if (this.props.loading) {
-            content = (<Loading />);
-        } else if (this.props.children) {
+        if (this.props.children) {
             content = (this.props.children);
         } else {
             content = (<div>Unknown content</div>);
@@ -18,6 +16,7 @@ class Content extends Component {
 
         return (
             <main className={componentStyles.content}>
+                <Loading />
                 {content}
             </main>
         )

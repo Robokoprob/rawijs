@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
 import Article from './article/Article';
-import { createArticle, setArticles } from 'redux/actions'
+import { createArticle, setArticles, setLoading } from 'redux/actions'
 
 import componentStyles from'./articles.scss';
 import globalStyles from 'global/global.scss';
@@ -36,12 +36,15 @@ class Articles extends Component {
     }
 
     fetchArticles(init) {
+        this.props.setLoading("articles", true);
         fetch("/data/articles.json", init)
             .then(response => response.json())
             .then(json => {
                 this.props.setArticles(json.articles);
+                this.props.setLoading("articles", false);
             }).catch(error => {
             console.error(error);
+            this.props.setLoading("articles", false);
         });
     }
 
@@ -70,7 +73,8 @@ function mapStateToProps(state, ownProps = {}) {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         createArticle: createArticle,
-        setArticles: setArticles
+        setArticles: setArticles,
+        setLoading: setLoading
     }, dispatch);
 }
 
