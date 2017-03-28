@@ -25,6 +25,7 @@ class Header extends React.Component {
                 <nav>
                     <IndexLink  to="/" onClick={this.handleClick} activeClassName={active}>Homepage</IndexLink >
                     <Link to="/articles" onClick={this.handleClick} activeClassName={active}>Articles</Link>
+                    <Link to="/map" onClick={this.handleClick} activeClassName={active}>Map</Link>
                     <Link to="/nogiets" onClick={this.handleClick} activeClassName={active}>Nog iets</Link>
                 </nav>
                 }

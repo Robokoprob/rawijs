@@ -6,6 +6,7 @@ import {createStore} from 'redux';
 import csaApp from './redux/reducers';
 import {Router, Route, IndexRoute, IndexLink, Link, browserHistory} from 'react-router';
 import Articles from './app/content/articles/Articles';
+import Map from './app/content/map/Map';
 import NotFound from './app/content/notfound/NotFound';
 import Home from './app/content/home/Home';
 
@@ -17,6 +18,7 @@ render(
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
                 <Route path='articles' component={Articles}/>
+                <Route path='map' component={Map}/>
                 <Route path="*" component={NotFound}/>
             </Route>
         </Router>
