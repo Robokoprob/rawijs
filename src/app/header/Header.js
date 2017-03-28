@@ -20,7 +20,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className={componentStyles.header}>
-                <h1><button type="button" className={componentStyles.title} onClick={this.handleClick}>Rawijs</button></h1>
+                <h1><button type="button" className={componentStyles.title} onClick={this.handleClick}>CSA</button></h1>
                 {this.state.showNav &&
                 <nav>
                     <IndexLink  to="/" onClick={this.handleClick} activeClassName={active}>Homepage</IndexLink >

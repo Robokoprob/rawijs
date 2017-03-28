@@ -3,13 +3,13 @@ import {render} from 'react-dom';
 import App from './app/App';
 import {Provider} from 'react-redux'
 import {createStore} from 'redux';
-import rawijsApp from './redux/reducers';
+import csaApp from './redux/reducers';
 import {Router, Route, IndexRoute, IndexLink, Link, browserHistory} from 'react-router';
 import Articles from './app/content/articles/Articles';
 import NotFound from './app/content/notfound/NotFound';
 import Home from './app/content/home/Home';
 
-const store = createStore(rawijsApp);
+const store = createStore(csaApp);
 
 render(
     <Provider store={store}>

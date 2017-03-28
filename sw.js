@@ -1,6 +1,6 @@
 const DEBUG = true;
 const DELAY_TIME_IN_MS = 1000;
-const CACHE_NAME = "rawijs_v2";
+const CACHE_NAME = "csa_v2";
 const CACHE_URLS = [
     "/data/articles.json"
 ];
