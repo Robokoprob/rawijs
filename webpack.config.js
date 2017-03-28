@@ -24,8 +24,12 @@ var config = {
                 path: ['/**'],
                 target: '/index.html',
                 secure: false,
-                bypass: function(req, res, opt){
-                    if(req.path.indexOf('/sw.js') !== -1 || req.path.indexOf('/img/') !== -1 || req.path.indexOf('/data/') !== -1 || req.path.indexOf('/build/') !== -1){
+                bypass: (req, res, opt) => {
+                    if(req.path.indexOf('/sw.js') !== -1 ||
+                        req.path.indexOf('/img/') !== -1 ||
+                        req.path.indexOf('/data/') !== -1 ||
+                        req.path.indexOf('/build/') !== -1 ||
+                        req.path.indexOf('/favicon') !== -1){
                         return req.path;
                     }
 
