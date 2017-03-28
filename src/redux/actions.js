@@ -1,12 +1,14 @@
 import { createArticleMethod, setArticlesMethod } from './action-articles';
-import { setLoadingMethod } from './action-loading';
+import { setLoadingMethod, closeLoadingMethod } from './action-loading';
 
 export default {
     createArticle: createArticleMethod,
     setArticles: setArticlesMethod,
-    setLoading: setLoadingMethod
+    setLoading: setLoadingMethod,
+    closeLoading: closeLoadingMethod
 };
 
 export const createArticle = createArticleMethod;
 export const setArticles = setArticlesMethod;
 export const setLoading = setLoadingMethod;
+export const closeLoading = closeLoadingMethod;

@@ -1,4 +1,4 @@
-import { SET_LOADING } from './actionTypes';
+import { SET_LOADING, CLOSE_LOADING } from './actionTypes';
 
 export default (state = {}, action) => {
     if (action) {
@@ -13,6 +13,9 @@ export default (state = {}, action) => {
                 }
 
                 return newState;
+            }
+            case CLOSE_LOADING: {
+                return {};
             }
         }
     }

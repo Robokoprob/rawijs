@@ -8,3 +8,4 @@ export const CREATE_ARTICLE = 'CREATE_ARTICLE';
 //    LOADING
 //****************
 export const SET_LOADING = 'SET_LOADING';
+export const CLOSE_LOADING = 'CLOSE_LOADING';

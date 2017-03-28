@@ -1,4 +1,4 @@
-import { SET_LOADING } from './actionTypes';
+import { SET_LOADING, CLOSE_LOADING } from './actionTypes';
 
 export const setLoadingMethod = (name, loading) => {
     return {
@@ -7,5 +7,12 @@ export const setLoadingMethod = (name, loading) => {
             name: name,
             loading: loading
         }
+    }
+};
+
+export const closeLoadingMethod = () => {
+    return {
+        type: CLOSE_LOADING,
+        payload: true
     }
 };
