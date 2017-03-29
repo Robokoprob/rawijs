@@ -4,7 +4,78 @@ import globalStyles from 'global/global.scss';
 
 class Home extends React.Component {
     render() {
-        return <div>Homepage...</div>
+        return <div>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+            <h2>Homepage...</h2>
+            <p>Lorem...</p>
+        </div>
     }
 }
 

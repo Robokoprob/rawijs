@@ -1,6 +1,8 @@
+@import '../../global/constants.scss';
+
 .content {
   position: absolute;
-  top: 2em;
+  top: $header-height;
   bottom: 1.5em;
   padding: 1em 0;
   overflow-y: auto;

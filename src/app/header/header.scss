@@ -1,44 +1,69 @@
 @import '../../global/constants.scss';
 
-.header {
+.navWrapper {
+  min-height: $header-height;
+  line-height: $header-height;
+  height: 100%;
+  text-align: center;
+  position: relative;
 
   background-color: #F8F8F8;
+  border-bottom: 1px solid #484848;
+  box-shadow: 0 2px 1px #888888;
+}
 
+.navLogo {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   position: absolute;
-  width: 100%;
-  z-index: 100;
+  display: inline-block;
+}
 
-  h1 {
-    border-bottom: 1px solid #484848;
-    box-shadow: 0 2px 1px #888888;
-    text-align: center;
-  }
+.navHamburger {
+  float: left;
+  position: relative;
+  z-index: 1;
+  padding: 0 $header-height/3;
+  height: $header-height;
 
-  nav {
-    display: flex;
-    align-items: stretch;
-    //justify-content: space-around;
-
-    a {
-      flex-grow: 1;
-      flex-basis: 0;
-      padding: 0.5em 1em;
-      text-align: center;
-
-      &:hover, &.active {
-        color: #FFFFFF;
-        background-color: #686868;
-      }
-    }
+  &:hover {
+    background-color: #B8B8B8;
   }
 }
 
-.title {
-  display: inline-block;
-  padding: 0.5em;
-  border: none;
-  background-color: transparent;
+.navBar {
+  z-index: 2;
+  min-width: 260px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+
+  &.closed {
+    left: -500px;
+  }
+}
+
+.navItem {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+
+  &:hover, &.active {
+    background-color: #B8B8B8;
+  }
+}
+
+.navOverlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  font-size: inherit;
+  background-color: rgba(0, 0, 0, 0.75);
 }
