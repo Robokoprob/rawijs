@@ -1,13 +1,19 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var develop = true;
 
 var config = {
     entry: {
-        bundle: [
-            './src/main.js',
-            './src/serviceWorker/serviceWorkerInit.js'
-        ]
+        bundle: (() => {
+            var bundleFiles = [
+                './src/main.js'
+            ];
+            if (!develop) {
+                bundleFiles.push('./src/serviceWorker/serviceWorkerInit.js');
+            }
+            return bundleFiles;
+        })()
     },
 
     output: {
